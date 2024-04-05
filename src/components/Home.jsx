@@ -31,12 +31,30 @@ const SearchResults = ({ results }) => {
   if (!results || results.length === 0) {
     return <div>No results found</div>;
   }
+  const { addToCart } = useCarts();
   return (
     <div className="search-results ">
       {results.map((result) => (
-        <div key={result.id}>
-          <h3>{result.name}</h3>
-          <p>{result.price}</p>
+        <div
+          key={result.id}
+          className="bg-fourth w-full md:h-80 h-full flex flex-row justify-center"
+        >
+          <div className="w-1/2">
+            <img src={result.image} alt="" className="w-2/4 h-32" />
+          </div>
+          <div className="text-left flex flex-col w-1/2 gap-1">
+            <h1>{result.name}</h1>
+            <h1>{result.price} ETB</h1>
+            <button
+              onClick={() => {
+                addToCart(result);
+                toast.info("Added to cart");
+              }}
+              className="w-20 h-10 bg-first hover:bg-fourth rounded-3xl font-bold flex items-center justify-center"
+            >
+              <BsCartPlus size={30} />
+            </button>
+          </div>
         </div>
       ))}
     </div>
@@ -229,9 +247,9 @@ const Home = () => {
           </div>
         </div>
         <div className=" md:w-2/6 h-full flex flex-col p-2 gap-2 ">
-          <div className="h-1/6  ">
+          <div className="h-60 ">
             <form
-              className="h-1/2 bg-first rounded flex items-center justify-between p-2"
+              className="h-20 bg-first rounded flex items-center justify-between p-2"
               onSubmit={handleSubmit(searchProducts)}
             >
               <input
