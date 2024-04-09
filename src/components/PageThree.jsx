@@ -1,6 +1,7 @@
 import Jordan from "../assets/jordan10.png";
 import { useCarts } from "../contexts/Cart";
 import { toast } from "react-toastify";
+import BG from "../assets/bgg.png";
 
 const PageThree = () => {
   const Products = {
@@ -14,7 +15,10 @@ const PageThree = () => {
 
   return (
     <div>
-      <div className=" flex justify-between  flex-col h-screen w-full  bg-third bg-cover inset-0 bg-center bg-no-repeat bg-fixed text-white p-5">
+      <div
+        className=" flex justify-between  flex-col h-screen w-full bg-cover inset-0 bg-center bg-no-repeat bg-fixed text-white p-5"
+        style={{ backgroundImage: `url(${BG})` }}
+      >
         <div className="md:h-1/6 md:w-1/3 flex items-center justify-center">
           <div className=" text-6xl h-full flex items-center text-left justify-center p-10 w-full">
             <h1 className=" hover:font-bold">

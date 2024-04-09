@@ -13,9 +13,7 @@ export default {
         orangei: "#975923",
         orangeii: "#ed7710",
       },
-      backgroundImage: {
-        bgone: "url('./src/assets/bgg.png')",
-      },
+
       height: {
         one: "10%",
         two: "20%",
