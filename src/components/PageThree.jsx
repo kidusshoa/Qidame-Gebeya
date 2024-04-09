@@ -14,7 +14,7 @@ const PageThree = () => {
 
   return (
     <div>
-      <div className=" flex justify-between  flex-col h-screen w-full  bg-bgone bg-cover inset-0 bg-center bg-no-repeat bg-fixed text-white p-5">
+      <div className=" flex justify-between  flex-col h-screen w-full  bg-second bg-cover inset-0 bg-center bg-no-repeat bg-fixed text-white p-5">
         <div className="md:h-1/6 md:w-1/3 flex items-center justify-center">
           <div className=" text-6xl h-full flex items-center text-left justify-center p-10 w-full">
             <h1 className=" hover:font-bold">
